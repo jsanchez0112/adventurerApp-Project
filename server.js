@@ -4,6 +4,7 @@ const app = express();
 require('dotenv').config();
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 //Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
@@ -27,6 +28,16 @@ app.use(
             resave: false,
             saveUninitialized: false
       }));
+
+//Sessions Controller
+const eventsController = require('./controllers/events')
+const profileController = require('./controllers/profile')
+const sessionsController = require('./controllers/sessions')
+const usersController = require('./controllers/users')
+app.use('/events' , eventsController);
+app.use('/profile' , profileController);
+app.use('/sessions' , sessionsController);
+app.use('/users' , usersController);
 
 
 
