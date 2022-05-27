@@ -9,6 +9,7 @@ const session = require('express-session');
 //Database Configuration
 mongoose.connect(process.env.DATABASE_URL, {
       useNewUrlParser: true,
+      useUnifiedTopology: true,
 });
 
 //Database Connection Error / Success 

@@ -1,7 +1,7 @@
 //Dependencies
 const express = require('express');
 const profileRouter = express.Router();
-const Profile = require('../models/profile')
+const Profile = require('../models/users')
 
 
 
