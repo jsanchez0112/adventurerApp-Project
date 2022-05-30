@@ -19,7 +19,7 @@ sessionsRouter.get('/new' , (req,res) => {
 
 //Create (login route)
 sessionsRouter.post('/' , (req,res) => {
-      Users.findOne({
+      User.findOne({
             //checking for an existing user
             email: req.body.email
       }, (error, foundUser) =>{

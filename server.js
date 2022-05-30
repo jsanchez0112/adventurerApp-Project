@@ -41,6 +41,19 @@ app.use('/sessions' , sessionsController);
 app.use('/users' , usersController);
 
 
+app.get('/' , (req,res) => {
+      if (req.session.currentUser) {
+            res.render('dashboard.ejs' , {
+                  currentUser: req.session.currentUser
+            })
+      } else {
+            res.render('index.ejs' , {
+                  currentUser: req.session.currentUser
+            })}});
+
+
+
+
 
 //Listener
 const PORT = process.env.PORT;
