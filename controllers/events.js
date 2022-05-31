@@ -4,10 +4,6 @@ const eventsRouter = express.Router();
 const Events = require("../models/events");
 
 
-eventsRouter.get('/dashboard/newEvent' , (req,res) => {
-      res.render('events/new.ejs', {
-            Events: Events,
-      })})
 
 // eventsRouter.post('/' , (req,res) => {
 //       Events.create(req.body, (err, createdEvents) => {
@@ -30,5 +26,9 @@ eventsRouter.get('/dashboard/newEvent' , (req,res) => {
 //                   Events: foundEvents
 //             })})});
 
+            eventsRouter.get('/newevent' , (req,res) => {
+                  res.send('test')
+            })
+            
 //Export User Router
 module.exports = eventsRouter;
