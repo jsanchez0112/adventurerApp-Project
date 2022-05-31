@@ -3,13 +3,16 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
 const User = require('../models/users.js');
+const profileRouter = express.Router();
 
 
 //New Login Page
 sessionsRouter.get('/new' , (req,res) => {
       res.render('sessions/new.ejs', {
             currentUser: req.session.currentUser
-      })});
+      })
+
+});
 
 //Delete (logout route)
       sessionsRouter.delete('/' , (req,res) => {
@@ -27,9 +30,6 @@ sessionsRouter.post('/' , (req,res) => {
             if(!foundUser) {
                   res.send(`No account found with provided email. Please retry or sign up for a free account.`);
             } else {
-                  console.log(req.body.email)
-                  console.log(req.body.password)
-                  console.log(foundUser.password)
                   //if user is found compare the password with the hashed password stored in the DB.
                   const passwordMatches = bcrypt.compareSync(req.body.password, foundUser.password);
                         //if password matches

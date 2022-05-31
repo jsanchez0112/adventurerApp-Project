@@ -17,11 +17,12 @@ profileRouter.put('/:id' , (req,res)=> {
       })})
 
 profileRouter.get('/', (req,res) => {
-            res.render('profile/profile.ejs' , {
-                  Profile: Profile,
-            })
-      })
-      
+            Profile.find({}, (err, foundProfile) => {
+                  console.log(foundProfile)
+                  res.render('profile/profile.ejs', {
+                        Profile: foundProfile,
+                  })
+            })});
 
 
 
