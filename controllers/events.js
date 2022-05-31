@@ -1,13 +1,8 @@
 //Dependencies
-const { Router } = require('express');
 const express = require('express');
-const { events } = require('../models/events');
 const eventsRouter = express.Router();
 const Events = require('../models/events');
 
-app.get('/dashboard' , (req,res) => {
-      res.render('dashboard.ejs')
-});
 
 
 eventsRouter.get('/new/event' , (req,res) => {
@@ -39,7 +34,10 @@ eventsRouter.get('/:id' , (req,res) => {
 
 
 
-
+            // eventsRouter.get('/dashboard' , (req,res) => {
+            //       res.render('dashboard.ejs')
+            // });
+            
 
 //Export User Router
 module.exports = eventsRouter;

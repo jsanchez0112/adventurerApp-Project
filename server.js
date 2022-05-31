@@ -51,7 +51,9 @@ app.get('/' , (req,res) => {
                   currentUser: req.session.currentUser
             })}});
 
-
+app.get('/dashboard' , (req,res) => {
+      res.render('dashboard.ejs')
+})
 
 
 

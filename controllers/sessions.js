@@ -26,9 +26,12 @@ sessionsRouter.post('/' , (req,res) => {
             //error if user is not found.
             if(!foundUser) {
                   res.send(`No account found with provided email. Please retry or sign up for a free account.`);
-            }else {
+            } else {
+                  console.log(req.body.email)
+                  console.log(req.body.password)
+                  console.log(foundUser.password)
                   //if user is found compare the password with the hashed password stored in the DB.
-                  const passwordMatches = bcrypt.compareSync(req.body.password,foundUser.passsword);
+                  const passwordMatches = bcrypt.compareSync(req.body.password, foundUser.password);
                         //if password matches
             if (passwordMatches){ 
                   //add user to the sessions

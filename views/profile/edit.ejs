@@ -10,11 +10,11 @@
       <h1>Edit Profile</h1>
 
       <main>
-<form action="////?_method=PUT" method="POST">
-Name: <input type="text" name="name" placeholder="Name">
-City: <input type="text" name="city" placeholder="City">
-Age: <input type="number" name="age" placeholder="Age">
-Name: <input type="text" name="name" placeholder="City, State/Country">
+<form action="/profile/<%= Profile.id %>?_method=PUT" method="POST">
+Name: <input type="text" name="name" value="<%= Profile.name%>" placeholder="Name">
+City: <input type="text" name="city" value="<%= Profile.city%>" placeholder="City">
+Age: <input type="number" name="age" value="<%= Profile.age%>" placeholder="Age">
+Hometown: <input type="text" name="name" value="<%= Profile.homwtown %>" placeholder="City, State/Country">
 <input type="submit" value="Update">
 </form>
       </main>
