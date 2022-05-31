@@ -42,7 +42,7 @@ sessionsRouter.post('/' , (req,res) => {
 
 
             // New Login
-      sessionsRouter.get('/new' , (req,res) => {
+      sessionsRouter.get('/login' , (req,res) => {
             res.render('sessions/new.ejs')
       })
 
