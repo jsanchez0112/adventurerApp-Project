@@ -17,7 +17,7 @@ profileRouter.put('/profile/:id' , (req,res)=> {
       })})
 
 profileRouter.get('/dashboard/profile', (req,res) => {
-            res.render('profile/profile.ejs')
+            res.send('test')
       })
       
 
