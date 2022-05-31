@@ -2,7 +2,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const sessionsRouter = express.Router();
-const User = require('../models/users');
+const User = require('../models/users.js');
 
 
 //New Login Page
@@ -22,19 +22,18 @@ sessionsRouter.post('/' , (req,res) => {
       User.findOne({
             //checking for an existing user
             email: req.body.email
-      }, (error, foundUser) =>{
+      }, (error, foundUser) => {
             //error if user is not found.
             if(!foundUser) {
                   res.send(`No account found with provided email. Please retry or sign up for a free account.`);
             }else {
                   //if user is found compare the password with the hashed password stored in the DB.
-                  const passwordMatches = bcrypt.compareSync(req.body.password, 
-                        foundUser.password);
+                  const passwordMatches = bcrypt.compareSync(req.body.password,foundUser.passsword);
                         //if password matches
             if (passwordMatches){ 
                   //add user to the sessions
                   req.session.currentUser = foundUser; 
-                  res.redirect('/');
+                  res.redirect('/dashboard');
             } else {
                   //if passwords don't match
                   res.send(`Invalid credentials. Please try again!`)
