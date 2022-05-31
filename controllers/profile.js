@@ -17,7 +17,9 @@ profileRouter.put('/:id' , (req,res)=> {
       })})
 
 profileRouter.get('/', (req,res) => {
-            res.render('profile/profile.ejs')
+            res.render('profile/profile.ejs' , {
+                  Profile: Profile,
+            })
       })
       
 

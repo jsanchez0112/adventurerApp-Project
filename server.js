@@ -5,6 +5,7 @@ require('dotenv').config();
 const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
+const Events = require('./models/events')
 
 
 //Database Configuration
@@ -55,9 +56,19 @@ app.get('/' , (req,res) => {
                   currentUser: req.session.currentUser
             })}});
 
+// app.get('/dashboard' , (req,res) => {
+//       res.render('dashboard.ejs' , {
+//             Events: Events,
+//       })
+// })
+
 app.get('/dashboard' , (req,res) => {
-      res.render('dashboard.ejs')
-})
+      Events.find({}, (err, foundEvents) => {
+            console.log(foundEvents)
+            res.render('dashboard.ejs', {
+                  Events: foundEvents
+      })
+})})
 
 
 

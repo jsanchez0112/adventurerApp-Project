@@ -11,9 +11,9 @@
       
 <main>
 <h2>Event Details</h2>
-<form action="/home//////?_method=PUT" method="POST">
-Date: <input type="text" name="date" placeholder="MM/DD/YYYY" value="item.date">
-Location: <input type="text" name="location" placeholder="City,State/Country" value="item.location">
+<form action="/events/<%= Events._id%>?_method=PUT" method="POST">
+Date: <input type="text" name="date" placeholder="MM/DD/YYYY" value="<%= Events.date %>">
+Location: <input type="text" name="location" placeholder="City,State/Country" value="<%=Events.location%>">
 <input type="submit" value="Update Event">
 
 </form>

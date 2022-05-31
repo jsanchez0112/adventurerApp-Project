@@ -10,8 +10,19 @@
       <%- include('./partials/nav.ejs') %>
       <header>Events!</header>
 
+<% for(let i = 0; i < Events.length; i++) {%>
+<table>
+      <tr>
+            <th>Date</th>
+            <th>Location</th>
+      </tr>
+      <tr>
+            <td><%=Events[i].date%></td>  
+            <td><a href="/events/<%= Events[i]._id %>"><%= Events[i].location%></a></td>
+      </tr>
 
-      
+</table>
+<% } %>
 <!-- List out the events here using a table so we can include the event happening and then the city it is happening in. -->
    
 </body>
