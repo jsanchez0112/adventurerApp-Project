@@ -5,7 +5,7 @@ const Events = require('../models/events');
 
 
 
-eventsRouter.get('/new/event' , (req,res) => {
+eventsRouter.get('/dashboard/newEvent' , (req,res) => {
       res.render('events/new.ejs')
 });
 
@@ -31,13 +31,6 @@ eventsRouter.get('/:id' , (req,res) => {
                   Events: foundEvents
             })})});
 
-
-
-
-            // eventsRouter.get('/dashboard' , (req,res) => {
-            //       res.render('dashboard.ejs')
-            // });
-            
 
 //Export User Router
 module.exports = eventsRouter;
