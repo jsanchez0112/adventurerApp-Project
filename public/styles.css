@@ -46,7 +46,6 @@
       align-items: center;
       margin: auto;
       border: double;
-      padding: 20px 0 20px 0;
 
 }
 /* profile - edit */
@@ -65,6 +64,7 @@
       margin: auto;
       border: double;
       padding: 20px 0 20px 0;
+
 }
 
 /* users - new */
@@ -110,10 +110,6 @@ td {
       width: 100px;
 }
 
-nav { 
-      text-align: center;
-      font-size: 1.25em;
-}
 
 #eventsLine { 
       width: 70%;
@@ -164,3 +160,7 @@ nav {
       animation-duration: 1.5s;
 }
 /* partials */
+nav { 
+      text-align: center;
+      font-size: 1.25em;
+}

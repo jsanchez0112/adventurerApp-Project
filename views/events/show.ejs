@@ -6,6 +6,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <link rel="stylesheet" href="/styles.css">
+      <style>
+            body{ 
+                  background-image: url('https://i.imgur.com/sMz4aEl.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: 100% 100%;
+            }
+      </style>
 </head>
 <body>
       <%- include('../partials/nav.ejs') %>
@@ -13,10 +21,11 @@
 <h1 class="eventHeader"><%= Events.name %></h1>
 <div id="eventDetails">
 <h4>Date: <%= Events.date %> </h4>
+<h4>Website: <a href="<%= Events.price %>">Link</a></h4>
 <h4>City: <%= Events.city %> </h4>
 <h4>Venue: <%= Events.venue %> </h4>
 <h4>Price: <%= Events.price %> </h4>
-<h4>Website: <a href="<%= Events.price %>">Link</a></h4>
+
 <button>
 <a href="/events/<%= Events._id%>/edit">Edit</a>
 </button>
