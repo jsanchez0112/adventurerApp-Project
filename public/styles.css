@@ -52,14 +52,23 @@
 /* profile - edit */
 /* profile - profile */
 /* sessions  - new */
+.loginHeader { 
+      text-align: center;
+      text-decoration: underline;
+}
+
+
+
+
+
+
 /* users - new */
 .registerHeader{ 
       text-align: center;
       text-decoration: underline;
 }
-
 .regForm{ 
-      width: 55%;
+      width: 45%;
       flex-direction: column;
       align-items: center;
       margin: auto;
@@ -75,6 +84,7 @@
       padding-right: 50px;
 
 }
+
 /* dashboard */
 .dashboardHeader {
       text-align: center;
