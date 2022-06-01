@@ -5,7 +5,11 @@ const Schema = mongoose.Schema;
 //User Schema
 const userSchema = Schema({
       date: {type: String, required: true},
-      location: {type: String, required: true}
+      location: {type: String, required: true},
+      venue: {type: String, required: true},
+      price: {type: String, required: true},
+
+
 })
 
 //User Model
