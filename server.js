@@ -18,6 +18,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 //Body parser middleware: gives access to req.body
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + '/public'));
 
 app.use(
       session({
@@ -56,11 +57,6 @@ app.get('/' , (req,res) => {
                   currentUser: req.session.currentUser
             })}});
 
-// app.get('/dashboard' , (req,res) => {
-//       res.render('dashboard.ejs' , {
-//             Events: Events,
-//       })
-// })
 
 app.get('/dashboard' , (req,res) => {
       Events.find({}, (err, foundEvents) => {
