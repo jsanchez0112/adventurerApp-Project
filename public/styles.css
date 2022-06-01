@@ -57,10 +57,15 @@
       text-decoration: underline;
 }
 
-
-
-
-
+.loginForm{ 
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      border: double;
+      padding: 20px 0 20px 0;
+}
 
 /* users - new */
 .registerHeader{ 
@@ -106,7 +111,8 @@ td {
 }
 
 nav { 
-      text-align: right;
+      text-align: center;
+      font-size: 1.25em;
 }
 
 #eventsLine { 

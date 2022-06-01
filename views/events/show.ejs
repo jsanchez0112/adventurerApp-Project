@@ -16,9 +16,14 @@
 <h4>City: <%= Events.city %> </h4>
 <h4>Venue: <%= Events.venue %> </h4>
 <h4>Price: <%= Events.price %> </h4>
+<h4>Website: <a href="<%= Events.price %>">Link</a></h4>
 <button>
-<a  href="/events/<%= Events._id%>/edit">Edit</a>
+<a href="/events/<%= Events._id%>/edit">Edit</a>
 </button>
+<form style="padding-top: 5px;" action="/events/<%= Events._id%>?_method=DELETE" method="POST">
+<input type="submit" value="Delete Event">
+</form>
+
 </div>
 
 

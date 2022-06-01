@@ -6,6 +6,14 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Events</title>
       <link rel="stylesheet" href="/styles.css">
+      <style>
+            body{ 
+                  background-image: url('https://mcdn.wallpapersafari.com/medium/60/84/yhk1gA.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: 100% 100%;
+            }
+      </style>
 </head>
 <body>
       <%- include('./partials/nav.ejs') %>
@@ -19,6 +27,7 @@
             <th>Venue</th>
             <th>City</th>
             <th>Price</th>
+            <th>Website</th>
 
       </tr>
       <tr>
@@ -27,6 +36,7 @@
             <td><%=Events[i].venue%></td>  
             <td><%=Events[i].city%></td>  
             <td><%=Events[i].price%></td>  
+            <td><a href="<%=Events[i].website%>">Link</a></td>  
       </tr>
 
 </table>

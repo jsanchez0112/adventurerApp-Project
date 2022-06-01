@@ -9,6 +9,7 @@ const userSchema = Schema({
       city: {type: String, required: true},
       venue: {type: String, required: true},
       price: {type: String, required: true},
+      website: {type: String, required: true},
 
 
 })
