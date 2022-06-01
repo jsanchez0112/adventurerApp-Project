@@ -4,20 +4,20 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <title>Document</title>
       <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-      <h1>Events|Edit</h1>
+      <h1 class="editHeader">Edit Event</h1>
       
 <main>
-<h2>Event Details</h2>
-<form action="/events/<%= Events._id%>?_method=PUT" method="POST">
-Name: <input type="text" name="name" placeholder="Event Name" value="<%= Events.name %>">
-Date: <input type="text" name="date" placeholder="MM/DD/YYYY" value="<%= Events.date %>">
-Location: <input type="text" name="location" placeholder="City,State/Country" value="<%=Events.location%>">
-Venue: <input type="text" name="venue" placeholder="AT&T Center" value="<%= Events.venue %>">
-Price: <input type="text" name="price" placeholder="$ - $$$$$" value="<%= Events.price %>">
+<form class="editForm" action="/events/<%= Events._id%>?_method=PUT" method="POST"><br>
+Name: <input type="text" name="name" placeholder="Event Name" value="<%= Events.name %>"><br>
+Date: <input type="text" name="date" placeholder="MM/DD/YYYY" value="<%= Events.date %>"><br>
+City: <input type="text" name="location" placeholder="City,State/Country" value="<%=Events.city%>"><br>
+Venue: <input type="text" name="venue" placeholder="AT&T Center" value="<%= Events.venue %>"><br>
+Price: <input type="text" name="price" placeholder="$ - $$$$$" value="<%= Events.price %>"><br>
 <input type="submit" value="Update Event">
 
 </form>

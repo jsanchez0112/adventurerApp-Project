@@ -9,17 +9,25 @@
 </head>
 <body>
       <%- include('./partials/nav.ejs') %>
-      <header>Events!</header>
+      <h1 class="dashboardHeader">Events!</h1>
 
 <% for(let i = 0; i < Events.length; i++) {%>
 <table>
       <tr>
             <th>Date</th>
-            <th>Location</th>
+            <th>Name</th>
+            <th>Venue</th>
+            <th>City</th>
+            <th>Price</th>
+
       </tr>
       <tr>
             <td><%=Events[i].date%></td>  
             <td><a href="/events/<%= Events[i]._id %>"><%= Events[i].location%></a></td>
+            <td><%=Events[i].venue%></td>  
+            <td><%=Events[i].city%></td>  
+            <td><%=Events[i].price%></td>  
+
       </tr>
 
 </table>

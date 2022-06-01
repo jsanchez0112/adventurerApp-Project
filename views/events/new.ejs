@@ -7,25 +7,26 @@
       <title>Create Event</title>
       <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
-      <header>
-      <h1>Create Event!</h1>
 <nav>
       <ul>
-            <li>
-                  <a href="/">Back to main list.</a>
-            </li>
+            <ol>
+                  <a href="/dashboard">Back to main list.</a>
+            </ol>
       </ul>
 </nav>
+<body>
+      <header>
+      <h1 class="createHeader">Create Event!</h1>
+
 </header>
 
 <main>
-      <form action="/events" method="POST">
-Name: <input type="text" name="name" placeholder="Event Name">
- Date: <input type="text" name="date" placeholder="MM/DD/YYYY">
- Location: <input type="text" name="location" placeholder="City,State/Country">
- Venue: <input type="text" name="venue" placeholder="AT&T Centet">
- Price: <input type="text" name="price" placeholder="$ - $$$$$">
+      <form class="createForm" action="/events" method="POST">
+Name: <input type="text" class="createItem" name="name" placeholder="Event Name">
+ Date: <input type="text" class="createItem" name="date" placeholder="MM/DD/YYYY">
+ City: <input type="text" class="createItem" name="location" placeholder="City,State/Country">
+ Venue: <input type="text" class="createItem" name="venue" placeholder="AT&T Center">
+ Price: <input type="text" class="createItem" name="price" placeholder="$ - $$$$$">
  <input type="submit" value="Add Event">
       </form>
 </main>
