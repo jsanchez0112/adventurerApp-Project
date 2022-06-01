@@ -53,10 +53,98 @@
 /* profile - profile */
 /* sessions  - new */
 /* users - new */
+.registerHeader{ 
+      text-align: center;
+      text-decoration: underline;
+}
+
+.regForm{ 
+      width: 55%;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      border: double;
+      padding: 20px 0 20px 0;
+}
+.inputEntries { 
+      float: right; 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: large;
+      padding-right: 50px;
+
+}
 /* dashboard */
 .dashboardHeader {
       text-align: center;
       text-decoration: underline;
+      padding-bottom: 50px;
+}
+
+.eventsTable{ 
+text-align: center;
+width: 75%;
+margin: auto;
+
+}
+th {
+      padding-top: 30px;
+}
+td {
+      width: 100px;
+}
+
+nav { 
+      text-align: right;
+}
+
+#eventsLine { 
+      width: 70%;
+
 }
 /* index */ 
+.homepageSlide{ 
+      position: relative;
+      margin: auto;
+}
+
+.fadingSlide {
+      display: none;
+}
+
+.previous, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: whte;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+}
+
+.dot{ 
+      cursor: pointer;
+      height: 20px;
+      width: 20px;
+      margin: 0 2px;
+      background-color: #8888;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover{ 
+      background: red;
+}
+
+.fade { 
+      animation-name: fade;
+      animation-duration: 1.5s;
+}
 /* partials */

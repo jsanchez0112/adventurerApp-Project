@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
-      <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-<a href="/sessions/new">Login</a>
-<a href="/users/new">Sign up</a>
-      <h1>Home Page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a href="/sessions/new">Login</a>
+    <a href="/users/new">Sign up</a>
+    <h1>Home Page</h1>
+    <div class="homepageSlide">
+      <div class="fadingSlide fade">
+        <img src="https://i.imgur.com/fpDZe3H.gif" style="width: 100%; height: 600px;" alt="image1" />
+      </div>
+      <div class="fadingSlide fade">
+        <img src="https://i.imgur.com/fpDZe3H.gif" style="width: 100%; height: 600px;" alt="image2" />
+      </div>
+      <div class="fadingSlide fade">
+        <img src="https://i.imgur.com/fpDZe3H.gif" style="width: 100%; height: 600px;" alt="image3" />
+      </div>
+      <div class="fadingSlide fade">
+        <img src="https://i.imgur.com/fpDZe3H.gif" style="width: 100%; height: 600px;" alt="image4" />
+        </div>
+
+<a class="previous" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br>
+<div style="text-align:center">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+<span class="dot" onclick="currentSlide(4)"></span>
+</div>
+<script> 
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+</script>
+<script>
+ function slideShow () { 
+
+let images = $(".fadingSlide")
+for (let i = 0; 0 < images.length; i++){ 
+slides[i].style.display="none"; 
+ }
+ imagesIndex++; 
+if(image.Index > images.length) {imagesIndex = 1} 
+ images[imagesIndex-1].style.display="block"; 
+ setTimeout(fadingSlide, 1500); 
+ }
+ let imageIndex = 0 
+slideShow()
+
+
+
+</script>
+  </body>
 </html>

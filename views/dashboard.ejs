@@ -12,7 +12,7 @@
       <h1 class="dashboardHeader">Events!</h1>
 
 <% for(let i = 0; i < Events.length; i++) {%>
-<table>
+<table class="eventsTable">
       <tr>
             <th>Date</th>
             <th>Name</th>
@@ -23,14 +23,14 @@
       </tr>
       <tr>
             <td><%=Events[i].date%></td>  
-            <td><a href="/events/<%= Events[i]._id %>"><%= Events[i].location%></a></td>
+            <td><a href="/events/<%= Events[i]._id %>"><%= Events[i].name%></a></td>
             <td><%=Events[i].venue%></td>  
             <td><%=Events[i].city%></td>  
             <td><%=Events[i].price%></td>  
-
       </tr>
 
 </table>
+<hr id="eventsLine">
 <% } %>
 <!-- List out the events here using a table so we can include the event happening and then the city it is happening in. -->
    
