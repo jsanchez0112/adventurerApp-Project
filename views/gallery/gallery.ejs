@@ -9,7 +9,16 @@
 </head>
 <body>
       <h1>Gallery </h1>
+      <form action="/gallery" method="POST">
+            <input type="text" class="createItem" name="img" placeholder="Image Link">
+      <input type="submit" value="Add Image">
+
+
 <h1><%= Gallery.img %></h1>
+
+<% for(let i = 0; i < Gallery.length; i++) {%>
+      <img src="<%= Gallery[i].img %>" alt="">
+<% } %>
       <!-- Put the info for the type of profile page here. Need to figure out how to add in a picture that will size the right way. -->
 </body>
 </html>
