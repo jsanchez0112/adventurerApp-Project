@@ -1,12 +1,12 @@
 //Dependencies
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
 const db = mongoose.connection; 
+require('dotenv').config();
 
 
 
