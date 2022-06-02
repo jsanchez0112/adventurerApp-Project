@@ -6,11 +6,11 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
-const MONGO_URI = process.env.MONGODB_URI;
+const MONGODB_URI = process.env.DATABASE_URI;
 
 
 //Database Configuration
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect(MONGODB_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
 });
