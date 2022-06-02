@@ -37,11 +37,11 @@ db.on('disconnected' , () => console.log('mongo disconnected'));
 
 //Controllers
 const eventsController = require('./controllers/events')
-const profileController = require('./controllers/profile')
+const galleryController = require('./controllers/gallery')
 const sessionsController = require('./controllers/sessions')
 const usersController = require('./controllers/users')
 app.use('/events' , eventsController);
-app.use('/profile' , profileController);
+app.use('/gallery' , galleryController);
 app.use('/sessions' , sessionsController);
 app.use('/users' , usersController);
 
