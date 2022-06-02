@@ -6,6 +6,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
+const mongoURI = process.env.MONGODB_URI;
 
 
 //Database Configuration
