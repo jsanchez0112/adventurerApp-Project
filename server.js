@@ -6,14 +6,13 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
-const MONGODB_URI = process.env.DATABASE_URI;
 const PORT = process.env.PORT;
 const db = mongoose.connection; 
 
 
 
 //Database Configuration
-mongoose.connect(MONGODB_URI , {
+mongoose.connect(process.env.DATABASE_URL , {
       useNewUrlParser: true,
       useUnifiedTopology: true,
 });
@@ -34,7 +33,7 @@ app.use(
 //Database Connection Error / Success 
 
 db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
-db.on('connected' , () => console.log('mongo connected', MONGODB_URI));
+db.on('connected' , () => console.log('mongo connected', DATABASE_URL));
 db.on('disconnected' , () => console.log('mongo disconnected'));
 
 
