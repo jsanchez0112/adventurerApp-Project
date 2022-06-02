@@ -7,7 +7,8 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
 const MONGODB_URI = process.env.DATABASE_URI;
-const PORT = process.env.PORT
+const PORT = process.env.PORT;
+
 
 
 //Database Configuration
@@ -70,7 +71,7 @@ app.get('/dashboard' , (req,res) => {
 
 
 //Listener
-const PORT = process.env.PORT;
+
 app.listen(PORT, () => console.log(`server is listening on port ${PORT}`));
 
 
