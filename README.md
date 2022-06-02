@@ -17,7 +17,9 @@ Designed to let users connect with other users who share the same interests as t
    
   <h4>Screenshots</h4>
   
-![Screen Shot 2022-05-12 at 11 43 37 AM](https://user-images.githubusercontent.com/103898057/168126882-72af1322-f046-46c7-bf56-d1cc5e56dd57.png)
+![Screen Shot 2022-06-02 at 5 55 45 PM](https://user-images.githubusercontent.com/103898057/171751470-55e39b04-a562-416f-aaa7-a43e6f94029f.png)
+
+![Screen Shot 2022-06-02 at 5 56 21 PM](https://user-images.githubusercontent.com/103898057/171751476-4a7d2e9d-4d99-4577-9617-c7462a9b4f75.png)
 
   
   
