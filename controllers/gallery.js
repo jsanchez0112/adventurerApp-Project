@@ -11,19 +11,7 @@ galleryRouter.get('/gallery' , (req,res) => {
             Gallery.create(req.body, (err, createdGallery) => {
                   res.redirect('/gallery')
             })});
-
-galleryRouter.get('/:id/edit', (req,res) => {
-      Gallery.findById(req.params.id, (err, foundGallery) => {
-            res.render('gallery/edit.ejs',{
-            Gallery: foundGallery,
-            })})});
-
-
-galleryRouter.put('/:id' , (req,res)=> {
-      Gallery.findByIdAndUpdate(req.params.id, req.body, () => {
-            res.redirect('/gallery');
-      })})
-
+//Show
 galleryRouter.get('/', (req,res) => {
             Gallery.find({}, (err, foundGallery) => {
                   res.render('gallery/gallery.ejs', {

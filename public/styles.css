@@ -48,8 +48,18 @@
       border: double;
 
 }
-/* profile - edit */
-/* profile - profile */
+
+/* gallery - images */
+.galleryImages { 
+      height: 300px;
+      width: 30%;
+}
+
+.imagesDiv { 
+      text-align: center;
+}
+
+
 /* sessions  - new */
 .loginHeader { 
       text-align: center;

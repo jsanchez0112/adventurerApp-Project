@@ -6,19 +6,25 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <link rel="stylesheet" href="/styles.css">
+      <style>
+            body  { 
+            background: rbg(34,193,195);
+            background: linear-gradient(0deg, rgb(34,193,195,1) 0%, rgba(249,217,244,1) 100%)
+            }
+      </style>
 </head>
 <body>
-      <h1>Gallery </h1>
-      <form action="/gallery" method="POST">
+      <%- include('../partials/nav.ejs') %>
+      <br>
+      <form style="padding-bottom: 50px; text-align: center;" action="/gallery" method="POST">
             <input type="text" class="createItem" name="img" placeholder="Image Link">
       <input type="submit" value="Add Image">
-
-
-<h1><%= Gallery.img %></h1>
+</form>
+<div class="imagesDiv">
 
 <% for(let i = 0; i < Gallery.length; i++) {%>
-      <img src="<%= Gallery[i].img %>" alt="">
+      <img class="galleryImages" src="<%= Gallery[i].img %>" alt="">
 <% } %>
-      <!-- Put the info for the type of profile page here. Need to figure out how to add in a picture that will size the right way. -->
+</div>
 </body>
 </html>
