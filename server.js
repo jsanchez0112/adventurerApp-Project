@@ -10,7 +10,7 @@ const MONGODB_URI = process.env.DATABASE_URI;
 
 
 //Database Configuration
-mongoose.connect(MONGODB_URI, {
+mongoose.connect(MONGODB_URI , {
       useNewUrlParser: true,
       useUnifiedTopology: true,
 });
@@ -31,7 +31,7 @@ app.use(
 //Database Connection Error / Success 
 const db = mongoose.connection; 
 db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
-db.on('connected' , () => console.log('mongo connected'));
+db.on('connected' , () => console.log('mongo connected', MONGODB_URI));
 db.on('disconnected' , () => console.log('mongo disconnected'));
 
 
