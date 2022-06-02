@@ -6,16 +6,23 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
-const PORT = process.env.PORT;
 const db = mongoose.connection; 
 
 
 
 //Database Configuration
+const {PORT, DATABASE_URL} = process.env;
 mongoose.connect(process.env.DATABASE_URL , {
       useNewUrlParser: true,
       useUnifiedTopology: true,
 });
+
+//Database Connection Error / Success 
+
+db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
+db.on('connected' , () => console.log('mongo connected', DATABASE_URL));
+db.on('disconnected' , () => console.log('mongo disconnected'));
+
 
 //Middleware 
 //Body parser middleware: gives access to req.body
@@ -30,11 +37,6 @@ app.use(
             saveUninitialized: false
       }));
 
-//Database Connection Error / Success 
-
-db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
-db.on('connected' , () => console.log('mongo connected', DATABASE_URL));
-db.on('disconnected' , () => console.log('mongo disconnected'));
 
 
 
