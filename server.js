@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const Events = require('./models/events')
 const MONGODB_URI = process.env.DATABASE_URI;
 const PORT = process.env.PORT;
+const db = mongoose.connection; 
 
 
 
@@ -31,7 +32,7 @@ app.use(
       }));
 
 //Database Connection Error / Success 
-const db = mongoose.connection; 
+
 db.on('error', (err) => console.log(err.message + ' is mongodb not running?'));
 db.on('connected' , () => console.log('mongo connected', MONGODB_URI));
 db.on('disconnected' , () => console.log('mongo disconnected'));
