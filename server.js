@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 const Events = require('./models/events')
 const MONGODB_URI = process.env.DATABASE_URI;
+const PORT = process.env.PORT
 
 
 //Database Configuration
