@@ -53,14 +53,13 @@ app.get('/' , (req,res) => {
                   currentUser: req.session.currentUser
             })
       } else {
-            res.render('index.ejs' , {
+            res.render('sessions/new.ejs' , {
                   currentUser: req.session.currentUser
             })}});
 
 
 app.get('/dashboard' , (req,res) => {
       Events.find({}, (err, foundEvents) => {
-            console.log(foundEvents)
             res.render('dashboard.ejs', {
                   Events: foundEvents
       })

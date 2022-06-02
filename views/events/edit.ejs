@@ -7,13 +7,21 @@
 
       <title>Document</title>
       <link rel="stylesheet" href="/styles.css">
+      <style>
+            body{ 
+                  background-image: url('https://i.imgur.com/UtSYmhB.jpg');
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;
+                  background-size: 100% 100%;
+            }
+      </style>
 </head>
 <body>
       <%- include('../partials/nav.ejs') %>
       <h1 class="editHeader">Edit Event</h1>
       
 <main>
-<form class="editForm" action="/events/<%= Events._id%>?_method=PUT" method="POST"><br>
+<form style="background-color: white;" class="editForm" action="/events/<%= Events._id%>?_method=PUT" method="POST"><br>
 Name: <input type="text" name="name" placeholder="Event Name" value="<%= Events.name %>"><br>
 Date: <input type="text" name="date" placeholder="MM/DD/YYYY" value="<%= Events.date %>"><br>
 City: <input type="text" name="location" placeholder="City,State/Country" value="<%=Events.city%>"><br>
